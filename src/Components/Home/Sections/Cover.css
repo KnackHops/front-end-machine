@@ -1,0 +1,6 @@
+div.cover_container {
+    height: 100vh;
+    min-height: 40rem;
+    width: 100%;
+    background: linear-gradient(to bottom, indianred 20%, white 80%)
+}

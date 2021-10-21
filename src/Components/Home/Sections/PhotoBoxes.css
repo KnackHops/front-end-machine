@@ -1,0 +1,72 @@
+section.photoboxes_container {
+    width: 100%;
+    height: 100vh;
+    min-height: 90rem;
+    min-height: 100rem;
+}
+
+.photoboxes_container > .universal-container {
+    height: 100%;
+    width: calc(100% - 20vw);
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    padding: 2rem;
+    gap: 5rem;
+}
+
+.photoboxes_container p {
+    background-color: greenyellow;
+    height: 40rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.photoboxes_container p::before {
+    content: "";
+    position: absolute;
+    height: 5rem;
+    width: 15rem;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 150, 100, .75);
+    transform: rotate(45deg);
+}
+
+.photoboxes_container p::after {
+    content: "";
+    position: absolute;
+    height: 5rem;
+    width: 15rem;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(205, 150, 50, .75);
+    transform: rotate(45deg);
+}
+
+.photoboxes_container p:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.photoboxes_container p:nth-child(2) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.photoboxes_container p:nth-child(3) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.photoboxes_container p:nth-child(4) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.photoboxes_container p span {
+    position: absolute;
+    font-size: 4rem;
+}
