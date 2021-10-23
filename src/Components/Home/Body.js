@@ -1,6 +1,5 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Redirect,
@@ -13,23 +12,14 @@ import { MenuContext } from '../../Wrapper/FrontEndMachine';
 
 const Body = () => {
     const { menuLoc } = useContext(MenuContext);
-
-    const RouteChecker = () => {
-        console.log(useLocation());
-        return (
-            <></>
-        )
-    }
-
+    
     return (
         <main className={`fd ${menuLoc?.main_menu}`}>
-            <Router>
-                <RouteChecker />
-                {
+                {/* {
                     menuLoc?.main_menu === "landpage_container" ?
                         <Redirect to="/" /> :
                         <Redirect to="/section" />
-                }
+                } */}
                 <Switch>
                     <Route exact path="/">
                         <Redirect to="/home" />
@@ -37,13 +27,13 @@ const Body = () => {
                     <Route path="/home">
                         <LandPage />
                     </Route>
-                    <Route path="/section">\
-                        {
+                    <Route path="/section">
+                        <SectionPage />
+                        {/* {
                             menuLoc.main_menu === "landpage_container" || !menuLoc.sub ? <Redirect to="/" /> : <SectionPage />
-                        }
+                        } */}
                     </Route>
                 </Switch>
-            </Router>
         </main>
     )
 }

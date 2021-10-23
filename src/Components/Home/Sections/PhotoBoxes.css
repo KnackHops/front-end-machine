@@ -1,49 +1,111 @@
 section.photoboxes_container {
     width: 100%;
     height: 100vh;
-    min-height: 90rem;
-    min-height: 100rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, .2) 0%, white 100%);
 }
 
 .photoboxes_container > .universal-container {
-    height: 100%;
+    margin-top: 2.5%;
+    height: 95%;
     width: calc(100% - 20vw);
-    background-color: lightblue;
+    background-color: rgba(2, 195, 154, 1);
+    border-radius: .5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fill, 1fr);
+    /* grid-template-columns: 1fr; */
     padding: 2rem;
+    padding-top: 4.5rem;
     gap: 5rem;
+    box-shadow: 0 0 .5rem black;
 }
 
 .photoboxes_container p {
-    background-color: greenyellow;
     height: 40rem;
+    min-height: 30rem;
     display: flex;
-    position: relative;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 2rem;
 }
 
-.photoboxes_container p::before {
+.photoboxes_container p > span.img_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+p > span > img {
+    max-height: 100%;
+    max-width: 100%;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    box-shadow: 0 .2rem .5rem black;
+}
+
+span.img_container::before, span.img_container::after {
+    border-radius: .5rem;
+    font-size: 2.75rem;
+    color: white;
+    text-align: center;
+}
+
+span.img_container::before {
     content: "";
     position: absolute;
     height: 5rem;
     width: 15rem;
-    right: 0;
+    right: -5rem;
     top: 0;
-    background-color: rgba(255, 150, 100, .75);
+    background-color: rgba(193, 124, 116, .75);
     transform: rotate(45deg);
+    box-shadow: 0 -.3rem .5rem black;
 }
 
-.photoboxes_container p::after {
+span.img_container::after {
     content: "";
     position: absolute;
     height: 5rem;
     width: 15rem;
-    left: 0;
+    left: -5rem;
     bottom: 0;
-    background-color: rgba(205, 150, 50, .75);
+    background-color: rgba(221, 201, 180, .75);
     transform: rotate(45deg);
+    box-shadow: 0 .3rem .5rem black;
+}
+
+p > span img:hover {
+    box-shadow: 0 0 1rem black;
+}
+
+p:nth-child(1) > span.img_container:hover, p:nth-child(3) > span.img_container:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+p:nth-child(2) > span.img_container:hover, p:nth-child(4) > span.img_container:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+p:nth-child(1) > span.img_container::before {
+    content: "Batil Patong";
+}
+
+p:nth-child(2) > span.img_container::before {
+    font-size: 2.25rem;
+    content: "Pancit Concha";
+}
+
+p:nth-child(3) > span.img_container::before {
+    font-size: 4rem;
+    content: "Lomi";
+}
+
+p:nth-child(4) > span.img_container::before {
+    content: "Pancit Sisig";
 }
 
 .photoboxes_container p:nth-child(1) {
@@ -66,7 +128,42 @@ section.photoboxes_container {
     grid-column-end: 7;
 }
 
-.photoboxes_container p span {
+.photoboxes_container p span.label_container {
     position: absolute;
     font-size: 4rem;
+}
+
+@media only screen and (max-width: 1370px) {
+    section.photoboxes_container {
+        min-height: 184rem;
+    }
+
+    .photoboxes_container > .universal-container {
+        height: 99%;
+    }
+
+    .photoboxes_container > .universal-container {
+        grid-template-columns: 1fr;
+        padding-bottom: 5rem;
+    }
+
+    .photoboxes_container p:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .photoboxes_container p:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .photoboxes_container p:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .photoboxes_container p:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
 }

@@ -1,11 +1,11 @@
 import ErrorBoundary from './Wrapper/ErrorBoundary';
 import './App.css';
-import FroneEndMachine from './Wrapper/FrontEndMachine';
+import FrontEndMachine from './Wrapper/FrontEndMachine';
 
 function App() {
   return (
     <ErrorBoundary>
-      <FroneEndMachine />
+      <FrontEndMachine />
     </ErrorBoundary>
   );
 }

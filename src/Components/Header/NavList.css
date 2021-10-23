@@ -37,10 +37,27 @@ ul.nav-list > li > a {
         display: inherit;
     }
 
+    header.section_container-header.contact_us-header ul.nav-list {
+        background-color: rgba(42, 61, 69, .95);
+    }
+
+    header.section_container-header.contact_us-header ul.nav-list.-open {
+        box-shadow: -.5rem .1rem .5rem black;
+    }
+
+    header.section_container-header.menu-header ul.nav-list {
+        background-color: rgba(255, 255, 255, .95);
+    }
+
+    header.section_container-header.menu-header ul.nav-list.-open {
+        box-shadow: -.2rem .5rem .4rem black;
+    }
+
+
     ul.nav-list {
         height: calc(100% - 8rem);
         top: 8rem;
-        background-color: indianred;
+        background-color: rgba(255, 255, 255, .95);
         right: -50vw;
         width: 50vw;
         position: fixed;

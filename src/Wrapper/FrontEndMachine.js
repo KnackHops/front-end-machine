@@ -2,11 +2,14 @@ import { createContext, useEffect, useState } from "react";
 import Body from "../Components/Home/Body";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer";
+import {
+    BrowserRouter as Router
+} from 'react-router-dom'
 
 const MenuContext = createContext("")
 
 const init_menu_state = {
-    main_menu: "landpage_container",
+    main_menu: "home_container",
     sub: ""
 }
 
@@ -35,9 +38,11 @@ const FroneEndMachine = () => {
                     setMenuLoc,
                     isWindowMedia
                 }}>
-                <Header />
-                <Body />
-                <Footer />
+                <Router>
+                    <Header />
+                    <Body />
+                    <Footer />
+                </Router>
             </MenuContext.Provider> }
         </div>
     )

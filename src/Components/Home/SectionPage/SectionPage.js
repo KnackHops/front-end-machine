@@ -1,34 +1,22 @@
-import { useContext, useMemo } from 'react';
 import {
     Switch,
-    Route,
-    Redirect
+    Route
 } from 'react-router-dom';
-import { MenuContext } from '../../../Wrapper/FrontEndMachine';
+import Contact from '../Sections/Contact';
+import MenuFood from '../Sections/MenuFood';
 import './SectionPage.css';
 
 const SectionPage = () => {
-    const { menuLoc } = useContext(MenuContext)
+    const path = "/section"
 
-    const path = useMemo( ( ) => {
-        return "/section"
-    }, [ menuLoc ] );
-
-    console.log(menuLoc);
     return (
         <>
-            {
-                <Redirect to={`${path}/${menuLoc.sub}`} />
-            }
             <Switch>
                 <Route path={`${path}/menu`}>
-                    <p>Menu</p>
+                    <MenuFood />
                 </Route>
                 <Route path={`${path}/contact_us`}>
-                    <p>Contact Us</p>
-                </Route>
-                <Route path={`${path}/make_reservation`}>
-                    <p>Make Reservation</p>
+                    <Contact />
                 </Route>
             </Switch>
         </>

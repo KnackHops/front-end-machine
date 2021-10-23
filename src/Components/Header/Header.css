@@ -4,11 +4,33 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: top .5s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+header.section_container-header {
+    position: relative;
+}
+
+/* header.section_container-header.menu-header {
+    background-color: white;
+} */
+
+header.section_container-header.contact_us-header {
+    background-color: rgba(5, 102, 141, 1);
+}
+
+header.section_container-header.contact_us-header, header.section_container-header.contact_us-header .nav-list li a {
+    color: white;
+}
+
+header.section_container-header.menu-header {
+    /* background-color: rgba(0, 27, 30, .1); */
+    position: relative;
 }
 
 header.-near-top {
-    background-color: white;
+    /* background-color: rgba(237, 246, 249, 1); */
+    background: rgba(255, 255, 255, .9);
 }
 
 header.-hide {
