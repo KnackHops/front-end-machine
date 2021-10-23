@@ -1,0 +1,11 @@
+.resto_marker {
+    display: block;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    z-index: 5;
+    background: rgba(2, 195, 154, 1) no-repeat;
+}

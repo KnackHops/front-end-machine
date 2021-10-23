@@ -1,0 +1,53 @@
+header {
+    position: fixed;
+    height: 8rem;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+}
+
+header.section_container-header {
+    position: relative;
+}
+
+/* header.section_container-header.menu-header {
+    background-color: white;
+} */
+
+header.section_container-header.contact_us-header {
+    background-color: rgba(5, 102, 141, 1);
+}
+
+header.section_container-header.contact_us-header, header.section_container-header.contact_us-header .nav-list li a {
+    color: white;
+}
+
+header.section_container-header.menu-header {
+    /* background-color: rgba(0, 27, 30, .1); */
+    position: relative;
+}
+
+header.-near-top {
+    /* background-color: rgba(237, 246, 249, 1); */
+    background: rgba(255, 255, 255, .9);
+}
+
+header.-hide {
+    top: -8rem;
+}
+
+header > div {
+    height: 100%;
+    justify-content: space-between;
+}
+
+header > div > div.icon-container {
+    height: 100%;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+div.icon-container > h1 {
+    font-weight: 500;
+}

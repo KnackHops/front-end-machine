@@ -1,0 +1,6 @@
+main.section_container {
+    height: calc(100vh - 6rem);
+    width: 100%;
+    min-height: 90rem;
+    background-color: indianred;
+}
