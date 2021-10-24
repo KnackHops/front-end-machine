@@ -2,8 +2,7 @@ import { useContext, useEffect } from 'react';
 import {
     Switch,
     Route,
-    Redirect,
-    useLocation
+    Redirect
 } from 'react-router-dom'
 import LandPage from './LandPage/LandPage';
 import SectionPage from './SectionPage/SectionPage';

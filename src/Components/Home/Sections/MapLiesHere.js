@@ -36,7 +36,8 @@ const MapLiesHere = () => {
                 style: mapStyleUrl,
                 center: center,
                 zoom: 16.25,
-                maxBounds: bounds
+                maxBounds: bounds,
+                dragRotate: false
                 // dragPan: false
             })
             

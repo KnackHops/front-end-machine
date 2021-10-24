@@ -57,7 +57,9 @@ const Header = () => {
             if ( header.children[0].children[2].classList.contains("-open")) {
                 return
             }
-            if ( !header.classList.contains("-hide") && menuLoc.main_menu === "home_container") {
+
+            if ( !header.classList.contains("-hide") && document.querySelector("main.home_container")) {
+                console.log(menuLoc)
                 header.classList.add("-hide");
             }
         }
@@ -73,7 +75,7 @@ const Header = () => {
             ht_bod.scrollTo(0, ht_bod.scTop);
         }
 
-        if ( menuLoc.main_menu === "home_container" ) {
+        if ( document.querySelector("main.home_container") ) {
 
             const header = document.querySelector("header");
 

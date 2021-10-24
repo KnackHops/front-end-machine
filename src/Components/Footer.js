@@ -25,7 +25,7 @@ const Footer = () => {
                         Buensuceso St, Zone 2, San Mariano, Isabela
                     </p>
                     <p>
-                        09###########
+                        0997 170 0167
                     </p>
                 </div>
                 <div className="developer_info fd">
