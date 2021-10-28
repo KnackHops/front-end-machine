@@ -1,10 +1,10 @@
 import './PhotoBoxes.css'
 
-const PhotoBoxes = () => {
+const PhotoBoxes = ( { photoBoxesIndSlide } ) => {
     return (
         <section className="photoboxes_container">
             <div className="universal-container fd">
-                <p>
+                <p className={ photoBoxesIndSlide.firstImgSlClass }>
                     <span className="label_container">
                         Batil Patong!
                     </span>
@@ -12,7 +12,7 @@ const PhotoBoxes = () => {
                         <img src="https://i.lensdump.com/i/gdCbVA.jpg" alt="A northern special noodles called Batil Patong! Most famous in the ever too hot Tuguegarao City."/>
                     </span>
                 </p>
-                <p>
+                <p className={ photoBoxesIndSlide.secondImgSlClass }>
                     <span className="label_container">
                         Pancit Concha!
                     </span>
@@ -20,7 +20,7 @@ const PhotoBoxes = () => {
                         <img src="https://i1.lensdump.com/i/gdCwnM.jpg" alt="A family recipe noodles called Concha! Derived from the originator of the recipe herself! Lola Concha" />
                     </span>
                 </p>
-                <p>
+                <p className={ photoBoxesIndSlide.thirdImgSlClass }>
                     <span className="label_container">
                         Lomi!
                     </span>
@@ -28,7 +28,7 @@ const PhotoBoxes = () => {
                     <img src="https://i2.lensdump.com/i/gdCx5Q.jpg" alt="A soup based noodles called Lomi! Known for it's thick property of soup and noodles" />
                     </span>
                 </p>
-                <p>
+                <p className={ photoBoxesIndSlide.fourthImgSlClass }>
                     <span className="label_container">
                         Pancit Sisig!
                     </span>

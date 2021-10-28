@@ -25,6 +25,10 @@ ul.nav-list > li > a {
     cursor: pointer;
 }
 
+header.section_container-header.contact_us-header .burger-machine > span {
+    background-color: white;
+}
+
 .burger-machine > span {
     height: 1rem;
     width: 6rem;
@@ -38,7 +42,7 @@ ul.nav-list > li > a {
     }
 
     header.section_container-header.contact_us-header ul.nav-list {
-        background-color: rgba(42, 61, 69, .95);
+        background-color: rgba(107, 112, 92, .9);
     }
 
     header.section_container-header.contact_us-header ul.nav-list.-open {
@@ -46,7 +50,7 @@ ul.nav-list > li > a {
     }
 
     header.section_container-header.menu-header ul.nav-list {
-        background-color: rgba(255, 255, 255, .95);
+        background-color: rgb(232, 211, 197, .9);
     }
 
     header.section_container-header.menu-header ul.nav-list.-open {

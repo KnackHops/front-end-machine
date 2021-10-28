@@ -1,37 +1,47 @@
 section.menufood_container {
     /* background: linear-gradient(10deg, rgba(131, 197, 190, 1) 30%, white 50%); */
-    background: linear-gradient(5deg, rgba(2, 195, 154, 1) 15%, rgba(0, 168, 150, 1), white 50%);
+    /* background: linear-gradient(5deg, rgba(2, 195, 154, 1) 15%, rgba(0, 168, 150, 1), white 50%); */
     height: 100vh;
-    min-height: 75rem;
+    min-height: 90rem;
     width: 100%;
+    background-image: url("Resource/bg-doodles.svg");
+    background-position: center;
+    background-size: 25rem;
 }
 
 main.section_container > section.menufood_container {
-    background: linear-gradient(to top, rgba(2, 195, 154, 1) 40%, white 100%);
+    /* background: linear-gradient(to top, rgba(2, 195, 154, 1) 40%, white 100%); */
     height: 100%;
     min-height: 90rem;
 }
 
 section.menufood_container > div {
     margin-top: 5rem;
-    /* margin-bottom: 5rem; */
     height: calc(100% - 10rem);
-    min-height: 70rem;
-    /* background: rgba(224, 122, 95, 1); */
-    /* background: rgba(255, 221, 210, 1); */
-    /* background: linear-gradient(-135deg, rgba(241, 156, 121, 1) -20%, rgba(164, 74, 63, 1), rgba(241, 156, 121, 1) 120%); */
-    /* background: rgba(241, 156, 121, 1); */
-    /* background: linear-gradient(-135deg, rgba(0, 168, 150, 1) 20%, rgba(240, 243, 189, 1)); */
-    box-shadow: 0 .75rem .5rem black;
-    background: rgba(240, 243, 189, .35);
+    min-height: 80rem;
+    box-shadow: 0 0 .75rem black;
+    background-color: rgba(232, 211, 197, 1);
+}
+
+main.section_container > section.menufood_container > div > .menufood_inside {
+    /* background: linear-gradient(to top, rgba(2, 195, 154, 1) 40%, white 100%); */
+    height: 80rem;
+    padding-bottom: 5rem;
 }
 
 .menufood_inside {
-    height: calc(100vh - 10rem);
-    min-height: 65rem;
+    height: 100%;
     padding: 2rem 5rem;
     flex-wrap: wrap;
     position: relative;
+    text-shadow: 0 .1rem .20rem rgba(107, 112, 92, 1);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0% 90%, rgba(0, 0, 0, .1) 100%);
+}
+
+@media only screen and (max-width: 560px) {
+    .menufood_inside {
+        padding: 1rem 1rem 1rem 5rem;
+    }
 }
 
 .menufood_inside > h1 {
@@ -46,8 +56,9 @@ section.menufood_container > div {
     content: "";
     position: absolute;
     width: 16rem;
-    height: .5rem;
-    background: linear-gradient(to right, black 0%, rgba(5, 102, 141, 1) 50%, white 90%); 
+    height: .25rem;
+    /* background: linear-gradient(to right, black 0%, rgba(5, 102, 141, 1) 50%, white 90%);  */
+    background: black;
     bottom: 0;
     left: -1rem;
 }
@@ -63,8 +74,9 @@ section.menufood_container > div {
     position: absolute;
     height: 4.5rem;
     left: 0;
-    width: .5rem;
-    background: linear-gradient(to bottom, rgba(5, 102, 141, 1) 0% 50%, rgba(0, 0, 0, 0) 100%);
+    width: .33rem;
+    /* background: linear-gradient(to bottom, rgba(5, 102, 141, 1) 0% 50%, rgba(0, 0, 0, 0) 100%); */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10% 90%, rgba(0, 0, 0, 0) 100%)
 }
 
 .menufood_inside h3 {
@@ -77,28 +89,12 @@ section.menufood_container > div {
     font-size: 2.5rem;
     width: 100%;
     justify-content: space-between;
+    background: rgb(69, 71, 58);
+    padding: .5rem 2rem;
 }
 
-.menufood_inside li > span:nth-child(2) {
-    text-shadow: 0 0 .25rem black;
-    color: rgba(5, 102, 141, 1);
-}
-
-.menufood_inside li::before, .menufood_inside li::after {
-    content: "";
-    position: absolute;
-    height: .15rem;
-    width: 40%;
-    bottom: 0;
-}
-
-.menufood_inside li::before {
-    background: linear-gradient(to right, rgba(5, 102, 141, 1) 0%, rgba(0, 0, 0, .5) 50%, rgba(0, 0, 0, .1) 100%);
-}
-
-.menufood_inside li::after {
-    background: linear-gradient(to left, rgba(5, 102, 141, 1) 0%, rgba(0, 0, 0, .5) 50%, rgba(0, 0, 0, .1) 100%);
-    right: 0;
+.menufood_inside li > span {
+    color: rgba(232, 211, 197, 1);
 }
 
 @media only screen and (max-width: 980px) {
@@ -115,4 +111,45 @@ section.menufood_container > div {
     .menufood_inside > h1 {
         left: -4.5rem;
     }
+}
+
+div.menu-dont_slide {
+    transition: transform 1s ease-in-out;
+    transform: translateX(0);
+}
+
+div.menu-do_slide {
+    transition: transform .5s ease-in-out;
+    transform: translateX(-100vw);
+}
+
+div.menu-dont_slide h1, div.menu-dont_slide h3 {
+    transition: all .55s .75s ease-out;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+div.menu-dont_slide h1 {
+    transform: translateY(0) rotate(-90deg);
+}
+
+div.menu-do_slide h1, div.menu-do_slide h3 {
+    transition: all .25s ease-out;
+    transform: translateY(-15rem);
+    opacity: 0;
+}
+
+div.menu-do_slide h1 {
+    transform: translateY(-15rem) rotate(-90deg);
+}
+
+div.menu-dont_slide li {
+    transition: all .25s .75s ease-out;
+    background-color: rgb(69, 71, 58);
+}
+
+div.menu-do_slide li {
+    transition: all .25s ease-out;
+    background-color: rgba(232, 211, 197, 1);
+    text-shadow: none;
 }

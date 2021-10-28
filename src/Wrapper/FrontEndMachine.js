@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useMemo } from "react";
 import Body from "../Components/Home/Body";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer";
@@ -18,6 +18,10 @@ const FroneEndMachine = () => {
 
     const [ isWindowMedia, setWindowMedia ] = useState(false);
 
+    const ht_bod = useMemo( () => {
+        return document.querySelector("html");
+    }, [])
+
     const windowMediaMonitor = () => {
         if ( window.innerWidth < 1450 ) {
             setWindowMedia(true)
@@ -36,7 +40,8 @@ const FroneEndMachine = () => {
             <MenuContext.Provider value={{
                     menuLoc,
                     setMenuLoc,
-                    isWindowMedia
+                    isWindowMedia,
+                    ht_bod
                 }}>
                 <Router>
                     <Header />
