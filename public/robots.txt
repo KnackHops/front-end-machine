@@ -5,4 +5,7 @@ Allow: /section
 Allow: /section/menu
 Allow: /section/contact_us
 Disallow: /Router.jsx
-Disallow: /sitemap-builder.jsx
+Disallow: /*.svg
+Disallow: /*.md
+
+Sitemap: http://zaccs-panciteria.com/sitemap.xml
