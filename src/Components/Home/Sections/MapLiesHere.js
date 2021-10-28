@@ -35,7 +35,7 @@ const MapLiesHere = () => {
             // notice the exclamation point in the import.
             // @ts-ignore
             // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-            // modu['default'].workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+            modu['default'].workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
             const map = new modu['default'].Map({
                 container: mapConID,
