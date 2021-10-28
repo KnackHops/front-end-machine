@@ -8,4 +8,4 @@ Disallow: /Router.jsx
 Disallow: /*.svg
 Disallow: /*.md
 
-Sitemap: http://zaccs-panciteria.com/sitemap.xml
+Sitemap: https://zaccs-panciteria.netlify.app/sitemap.xml
