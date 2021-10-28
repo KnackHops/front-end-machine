@@ -1,6 +1,6 @@
 import './MapLiesHere.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const center = [122.01753029011469, 16.981790663900746]
 const imgIconUrl = "https://i1.lensdump.com/i/gdLcnK.png";

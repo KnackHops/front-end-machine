@@ -15,14 +15,13 @@ const SectionPage = () => {
 
     const { menuLoc, setMenuLoc } = useContext(MenuContext);
     const cur = useLocation();
-    console.log(cur);
     
     useEffect(()=>{
-        if ( menuLoc.main_menu !== "section_container" ) {
+        if ( menuLoc?.main_menu !== "section_container" ) {
             const main_menu = "section_container";
             let sub = cur.pathname.substring(9);
 
-            if ( menuLoc.sub ) {
+            if ( menuLoc?.sub ) {
                 if ( cur.pathname.search(menuLoc.sub) > 0 ) {
                     sub = cur.pathname.substring(9);
                 }
