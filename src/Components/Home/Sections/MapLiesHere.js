@@ -2,12 +2,6 @@ import './MapLiesHere.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useMemo, useState } from 'react';
 
-// The following is required to stop "npm build" from transpiling mapbox code.
-// notice the exclamation point in the import.
-// @ts-ignore
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
-
 const center = [122.01753029011469, 16.981790663900746]
 const imgIconUrl = "https://i1.lensdump.com/i/gdLcnK.png";
 const accessToken = "pk.eyJ1IjoiYWZmYWZ1IiwiYSI6ImNrdjJsbXA0dDB3MjkzMm1zODBvdHFybTIifQ.6tQtiF80ykkSmiHj50XqIg"
@@ -36,6 +30,12 @@ const MapLiesHere = () => {
             setLoaded(true)
             let modu = await import('mapbox-gl');
             modu['default'].accessToken = accessToken;
+            
+            // The following is required to stop "npm build" from transpiling mapbox code.
+            // notice the exclamation point in the import.
+            // @ts-ignore
+            // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+            modu['default'].workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
             const map = new modu['default'].Map({
                 container: mapConID,
