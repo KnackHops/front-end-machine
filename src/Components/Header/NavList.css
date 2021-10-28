@@ -6,11 +6,14 @@ ul.nav-list {
 }
 
 ul.nav-list > li > a {
-    font-size: 2.5rem;
+    font-size: 3rem;
     cursor: pointer;
 }
 
-
+ul.nav-list > li.here-now > a {
+    text-decoration: underline;
+    cursor: text;
+}
 
 .burger-machine {
     position: absolute;

@@ -1,10 +1,9 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import {
     Switch,
     Route,
     useLocation
 } from 'react-router-dom';
-import { useEffect } from 'react/cjs/react.development';
 import { MenuContext } from '../../../Wrapper/FrontEndMachine';
 import Contact from '../Sections/Contact';
 import MenuFood from '../Sections/MenuFood';
