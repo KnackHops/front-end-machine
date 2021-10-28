@@ -84,10 +84,14 @@ main.section_container > section.menufood_container > div > .menufood_inside {
     font-size: 4.5rem;
 }
 
-.menufood_inside li {
+.menufood_inside li.parent_list {
     font-size: 2rem;
     background: rgb(69, 71, 58);
     padding: .5rem 2rem;
+}
+
+.menufood_inside li.child_list {
+    padding: .5rem .5rem;
 }
 
 .menufood_inside li.parent_list > p {

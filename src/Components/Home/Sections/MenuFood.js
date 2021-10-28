@@ -8,19 +8,19 @@ const MenuFood = ( { menuClassChange } ) => {
             priceList: [
                 {
                     label: "Regular",
-                    price: "60"
+                    price: "60 ₱"
                 },
                 {
                     label: "Special",
-                    price: "80"
+                    price: "80 ₱"
                 },
                 {
                     label: "Jumbo",
-                    price: "100"
+                    price: "100 ₱"
                 },
                 {
                     label: "Overload",
-                    price: "150"
+                    price: "150 ₱"
                 },
             ]
         },
@@ -29,11 +29,11 @@ const MenuFood = ( { menuClassChange } ) => {
             priceList: [
                 {
                     label: "Regular",
-                    price: "60"
+                    price: "60 ₱"
                 },
                 {
                     label: "Overload",
-                    price: "120"
+                    price: "120 ₱"
                 },
             ]
         },
@@ -42,21 +42,21 @@ const MenuFood = ( { menuClassChange } ) => {
             priceList: [
                 {
                     label: "Regular",
-                    price: "60"
+                    price: "60 ₱"
                 },
                 {
                     label: "Special",
-                    price: "80"
+                    price: "80 ₱"
                 },
             ]
         },
         {
             label: "Mami",
-            price: "60"
+            price: "60 ₱"
         },
         {
             label: "Pancit Sisig",
-            price: "100"
+            price: "100 ₱"
         }
     ]
 
@@ -66,15 +66,15 @@ const MenuFood = ( { menuClassChange } ) => {
             priceList: [
                 {
                     label: "Small",
-                    price: "330"
+                    price: "330 ₱"
                 },
                 {
                     label: "Medium",
-                    price: "530"
+                    price: "530 ₱"
                 },
                 {
                     label: "Large",
-                    price: "1030"
+                    price: "1030 ₱"
                 },
             ]
         }
@@ -83,11 +83,11 @@ const MenuFood = ( { menuClassChange } ) => {
     const sideFoodList = [
         {
             label: "Lumpia",
-            price: "5"
+            price: "5 ₱"
         },
         {
             label: "Buko Halo-Halo",
-            price: "60"
+            price: "60 ₱"
         }
     ]
 
