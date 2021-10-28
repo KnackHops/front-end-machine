@@ -1,7 +1,7 @@
 import './MenuFood.css';
 import MenuFoodInside from './MenuFoodInside';
 
-const MenuFood = () => {
+const MenuFood = ( { menuClassChange } ) => {
     const pancitList = [
         {
             label: "Batil Patong",
@@ -53,8 +53,8 @@ const MenuFood = () => {
 
     return (
         <section className="menufood_container">
-            <div className="universal-container">
-                <div className="menufood_inside fd">
+            <div className={`universal-container ${menuClassChange}`}>
+                <div className={`menufood_inside fd`}>
                     <h1>Menu</h1>
                     <MenuFoodInside classCon="pancit_container" headerLabel="Pancit" itemList={pancitList}/>
                     <MenuFoodInside classCon="bilao_container" headerLabel="Bilao" itemList={bilaoList} />

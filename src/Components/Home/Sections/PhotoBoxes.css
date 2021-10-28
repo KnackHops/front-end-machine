@@ -171,3 +171,14 @@ p:nth-child(4) > span.img_container::before {
         grid-column-end: 2;
     }
 }
+
+.photoboxes_container > div > p.pb-do_slide {
+    transform: translateY(15rem) scale(1.2);
+    opacity: 0;
+}
+
+.photoboxes_container > div > p.pb-dont_slide {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    transition: all .55s ease-in;
+}

@@ -1,3 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /home
+Allow: /section
+Allow: /section/menu
+Allow: /section/contact_us
+Disallow: /Router.jsx
+Disallow: /sitemap-builder.jsx

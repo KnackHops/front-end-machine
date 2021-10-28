@@ -38,6 +38,12 @@ main.section_container > section.menufood_container > div > .menufood_inside {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0% 90%, rgba(0, 0, 0, .1) 100%);
 }
 
+@media only screen and (max-width: 560px) {
+    .menufood_inside {
+        padding: 1rem 1rem 1rem 5rem;
+    }
+}
+
 .menufood_inside > h1 {
     position: absolute;
     font-size: 5rem;
@@ -91,27 +97,6 @@ main.section_container > section.menufood_container > div > .menufood_inside {
     color: rgba(232, 211, 197, 1);
 }
 
-/* .menufood_inside li > span:nth-child(2) {
-    color: rgba(5, 102, 141, 1);
-} */
-
-/* .menufood_inside li::before, .menufood_inside li::after {
-    content: "";
-    position: absolute;
-    height: .15rem;
-    width: 40%;
-    bottom: 0;
-}
-
-.menufood_inside li::before {
-    background: linear-gradient(to right, rgba(5, 102, 141, 1) 0%, rgba(0, 0, 0, .5) 50%, rgba(0, 0, 0, .1) 100%);
-}
-
-.menufood_inside li::after {
-    background: linear-gradient(to left, rgba(5, 102, 141, 1) 0%, rgba(0, 0, 0, .5) 50%, rgba(0, 0, 0, .1) 100%);
-    right: 0;
-} */
-
 @media only screen and (max-width: 980px) {
     .menufood_inside {
         flex-direction: column;
@@ -126,4 +111,45 @@ main.section_container > section.menufood_container > div > .menufood_inside {
     .menufood_inside > h1 {
         left: -4.5rem;
     }
+}
+
+div.menu-dont_slide {
+    transition: transform 1s ease-in-out;
+    transform: translateX(0);
+}
+
+div.menu-do_slide {
+    transition: transform .5s ease-in-out;
+    transform: translateX(-100vw);
+}
+
+div.menu-dont_slide h1, div.menu-dont_slide h3 {
+    transition: all .55s .75s ease-out;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+div.menu-dont_slide h1 {
+    transform: translateY(0) rotate(-90deg);
+}
+
+div.menu-do_slide h1, div.menu-do_slide h3 {
+    transition: all .25s ease-out;
+    transform: translateY(-15rem);
+    opacity: 0;
+}
+
+div.menu-do_slide h1 {
+    transform: translateY(-15rem) rotate(-90deg);
+}
+
+div.menu-dont_slide li {
+    transition: all .25s .75s ease-out;
+    background-color: rgb(69, 71, 58);
+}
+
+div.menu-do_slide li {
+    transition: all .25s ease-out;
+    background-color: rgba(232, 211, 197, 1);
+    text-shadow: none;
 }

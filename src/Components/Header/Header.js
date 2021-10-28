@@ -1,11 +1,11 @@
-import { useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MenuContext } from '../../Wrapper/FrontEndMachine';
 import './Header.css';
 import NavList from './NavList';
 import { useLocation } from 'react-router';
 
 const Header = () => {
-    const { menuLoc, setMenuLoc, isWindowMedia } = useContext(MenuContext);
+    const { menuLoc, setMenuLoc, isWindowMedia, ht_bod } = useContext(MenuContext);
 
     useEffect( () => {
         if ( burgStatus === "-open" ) {
@@ -20,10 +20,6 @@ const Header = () => {
 
         return () => window.removeEventListener("scroll", scrollMonitor);
     })
-
-    const ht_bod = useMemo( () => {
-        return document.querySelector("html");
-    }, [])
 
     const [ prevScroll, setPrevScroll ] = useState(ht_bod.scrollTop);
 
@@ -59,7 +55,6 @@ const Header = () => {
             }
 
             if ( !header.classList.contains("-hide") && document.querySelector("main.home_container")) {
-                console.log(menuLoc)
                 header.classList.add("-hide");
             }
         }

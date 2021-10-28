@@ -1,14 +1,14 @@
 div.cover_container {
     height: 100vh;
-    min-height: 85rem;
+    min-height: 80rem;
     width: 100%;
-    align-items: center;
     z-index: 5;
+    padding-top: 8rem;
 }
 
 div.cover_inside {
     position: relative;
-    height: 67rem;
+    height: 75rem;
     background-size: 24rem;
     background-position: center;
     width: 100%;
@@ -21,6 +21,7 @@ div.cover_image_container {
     position: absolute;
     justify-content: space-around;
     z-index: 7;
+    transition: transform .25s ease-in-out;
 }
 
 p.current_image_container, p.prev_image_container, p.next_image_container {
@@ -65,11 +66,11 @@ div.cover_middle {
     }
 
     div.cover_inside {
-        height: 150rem;
+        height: 160rem;
     }
 
     div.cover_image_container {
-        height: 125rem;
+        height: 135rem;
         flex-flow: column;
     }
 
@@ -79,6 +80,7 @@ div.cover_middle {
     }
 
     p.current_image_container > img, p.prev_image_container > img, p.next_image_container > img {
+        object-fit: cover;
         height: 90%;
         width: 95%;
     }
