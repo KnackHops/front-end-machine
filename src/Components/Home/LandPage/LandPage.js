@@ -99,10 +99,10 @@ const LandPage = () => {
 
         // menu fade in
         // no fade out
-        const secondCompoInnerLimit = firstCompo.offsetHeight  * .25;
-        const secondCompoOuterLimit = firstCompo.offsetHeight  + ( secondCompo.offsetHeight * .75 );
+        const secondCompoInnerLimit = firstCompo.offsetHeight  * .6;
+        // const secondCompoOuterLimit = firstCompo.offsetHeight  + ( secondCompo.offsetHeight * .75 );
 
-        if ( sc >= secondCompoInnerLimit && sc <= secondCompoOuterLimit ) {
+        if ( sc >= secondCompoInnerLimit ) {
             if ( !menuClassChange.includes("menu-dont") ) {
                 setMenuClassChange("menu-dont_slide");
             }
