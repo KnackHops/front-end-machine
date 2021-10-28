@@ -2,7 +2,7 @@ section.menufood_container {
     /* background: linear-gradient(10deg, rgba(131, 197, 190, 1) 30%, white 50%); */
     /* background: linear-gradient(5deg, rgba(2, 195, 154, 1) 15%, rgba(0, 168, 150, 1), white 50%); */
     height: 100vh;
-    min-height: 90rem;
+    min-height: 99rem;
     width: 100%;
     background-image: url("Resource/bg-doodles.svg");
     background-position: center;
@@ -12,20 +12,20 @@ section.menufood_container {
 main.section_container > section.menufood_container {
     /* background: linear-gradient(to top, rgba(2, 195, 154, 1) 40%, white 100%); */
     height: 100%;
-    min-height: 90rem;
+    min-height: 99rem;
 }
 
 section.menufood_container > div {
     margin-top: 5rem;
     height: calc(100% - 10rem);
-    min-height: 80rem;
+    min-height: 89rem;
     box-shadow: 0 0 .75rem black;
     background-color: rgba(232, 211, 197, 1);
 }
 
 main.section_container > section.menufood_container > div > .menufood_inside {
     /* background: linear-gradient(to top, rgba(2, 195, 154, 1) 40%, white 100%); */
-    height: 80rem;
+    height: 89rem;
     padding-bottom: 5rem;
 }
 
@@ -85,15 +85,23 @@ main.section_container > section.menufood_container > div > .menufood_inside {
 }
 
 .menufood_inside li {
-    position: relative;
-    font-size: 2.5rem;
-    width: 100%;
-    justify-content: space-between;
+    font-size: 2rem;
     background: rgb(69, 71, 58);
     padding: .5rem 2rem;
 }
 
-.menufood_inside li > span {
+.menufood_inside li.parent_list > p {
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+}
+
+.menufood_inside li.child_list > p {
+    width: 100%;
+    justify-content: space-between;
+}
+
+li.parent_list > p, li.child_list > p {
     color: rgba(232, 211, 197, 1);
 }
 
@@ -143,12 +151,12 @@ div.menu-do_slide h1 {
     transform: translateY(-15rem) rotate(-90deg);
 }
 
-div.menu-dont_slide li {
+div.menu-dont_slide li.parent_list {
     transition: all .25s .75s ease-out;
     background-color: rgb(69, 71, 58);
 }
 
-div.menu-do_slide li {
+div.menu-do_slide li.parent_list {
     transition: all .25s ease-out;
     background-color: rgba(232, 211, 197, 1);
     text-shadow: none;
