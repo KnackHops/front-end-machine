@@ -3,8 +3,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { useMemo, useState } from 'react';
 
 const center = [122.01753029011469, 16.981790663900746]
-const imgIconUrl = "https://i1.lensdump.com/i/gdLcnK.png";
-const accessToken = "pk.eyJ1IjoiYWZmYWZ1IiwiYSI6ImNrdjJsbXA0dDB3MjkzMm1zODBvdHFybTIifQ.6tQtiF80ykkSmiHj50XqIg"
+const imgIconUrl = process.env.REACT_APP_MAPBOX_ICON;
+const accessToken = process.env.REACT_APP_MAPBOX_API_KEY;
 const mapStyleUrl = 'mapbox://styles/mapbox/streets-v8'
 const mapConID = 'here_lies_map_container';
 const geoFeat = {

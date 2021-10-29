@@ -1,5 +1,9 @@
 import './Cover.css'
 
+const prev_img = process.env.REACT_APP_PREV_IMG
+const cur_img = process.env.REACT_APP_CUR_IMG
+const nxt_img = process.env.REACT_APP_NXT_IMG
+
 const Cover = ( { slideUp, coverImageSlide, coverImageIndSlide } ) => {
     return (
         <div className="cover_container fd">
@@ -18,7 +22,7 @@ const Cover = ( { slideUp, coverImageSlide, coverImageIndSlide } ) => {
                                 opacity: 1 - ( ( coverImageIndSlide.firstImgSl * 1.25 ) * .010 )
                             }
                         }>
-                        <img src="https://i3.lensdump.com/i/gdsiyC.jpg" alt="">
+                        <img src={prev_img} alt="">
                             
                         </img>
                     </p>
@@ -29,7 +33,7 @@ const Cover = ( { slideUp, coverImageSlide, coverImageIndSlide } ) => {
                                 opacity: 1 - ( ( coverImageIndSlide.secondImgSl * 1.25 ) * .010 )
                             }
                         }>
-                        <img src="https://i.lensdump.com/i/gdmyFP.jpg" alt="">
+                        <img src={cur_img} alt="">
                         
                         </img>
                     </p>
@@ -40,7 +44,7 @@ const Cover = ( { slideUp, coverImageSlide, coverImageIndSlide } ) => {
                                 opacity: 1 - ( ( coverImageIndSlide.thirdImgSl * 1.25 ) * .010 )
                             }
                         }>
-                        <img src="https://i1.lensdump.com/i/gdsAQ2.jpg" alt="">
+                        <img src={nxt_img} alt="">
                         
                         </img>
                     </p>
@@ -54,28 +58,6 @@ const Cover = ( { slideUp, coverImageSlide, coverImageIndSlide } ) => {
                     </p>
                 </div>
             </div>
-            {/* <div className="cover_images_container fd">
-                <p className="current_image_container">
-                    <img src="https://i.lensdump.com/i/gdmyFP.jpg" alt="">
-                    
-                    </img>
-                </p>
-                <div className="other_image_container">
-                    <p className="prev_image_container">
-                        <img src="https://i3.lensdump.com/i/gdsiyC.jpg">
-                        
-                        </img>
-                    </p>
-                    <p className="next_image_container">
-                        <img src="https://i1.lensdump.com/i/gdsAQ2.jpg">
-                        
-                        </img>
-                    </p>
-                </div>
-            </div> */}
-            {/* <div className="style_populus">
-
-            </div> */}
         </div>
     )
 }

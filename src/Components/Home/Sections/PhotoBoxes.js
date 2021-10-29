@@ -1,5 +1,10 @@
 import './PhotoBoxes.css'
 
+const batil_img = process.env.REACT_APP_BATIL_IMG
+const concha_img = process.env.REACT_APP_CONCHA_IMG
+const lomi_img = process.env.REACT_APP_LOMI_IMG
+const sisig_img = process.env.REACT_APP_SISIG_IMG
+
 const PhotoBoxes = ( { photoBoxesIndSlide } ) => {
     return (
         <section className="photoboxes_container">
@@ -9,7 +14,7 @@ const PhotoBoxes = ( { photoBoxesIndSlide } ) => {
                         Batil Patong!
                     </span>
                     <span className="img_container">
-                        <img src="https://i.lensdump.com/i/gdCbVA.jpg" alt="A northern special noodles called Batil Patong! Most famous in the ever too hot Tuguegarao City."/>
+                        <img src={batil_img} alt="A northern special noodles called Batil Patong! Most famous in the ever too hot Tuguegarao City."/>
                     </span>
                 </p>
                 <p className={ photoBoxesIndSlide.secondImgSlClass }>
@@ -17,7 +22,7 @@ const PhotoBoxes = ( { photoBoxesIndSlide } ) => {
                         Pancit Concha!
                     </span>
                     <span className="img_container">
-                        <img src="https://i1.lensdump.com/i/gdCwnM.jpg" alt="A family recipe noodles called Concha! Derived from the originator of the recipe herself! Lola Concha" />
+                        <img src={concha_img} alt="A family recipe noodles called Concha! Derived from the originator of the recipe herself! Lola Concha" />
                     </span>
                 </p>
                 <p className={ photoBoxesIndSlide.thirdImgSlClass }>
@@ -25,7 +30,7 @@ const PhotoBoxes = ( { photoBoxesIndSlide } ) => {
                         Lomi!
                     </span>
                     <span className="img_container" >
-                    <img src="https://i2.lensdump.com/i/gdCx5Q.jpg" alt="A soup based noodles called Lomi! Known for it's thick property of soup and noodles" />
+                    <img src={lomi_img} alt="A soup based noodles called Lomi! Known for it's thick property of soup and noodles" />
                     </span>
                 </p>
                 <p className={ photoBoxesIndSlide.fourthImgSlClass }>
@@ -33,7 +38,7 @@ const PhotoBoxes = ( { photoBoxesIndSlide } ) => {
                         Pancit Sisig!
                     </span>
                     <span className="img_container">
-                        <img src="https://i3.lensdump.com/i/gdC5Ta.jpg"  alt="A modern filipino mixed! The ever so tasty sisig on top of a normal pancit!"/>
+                        <img src={sisig_img}  alt="A modern filipino mixed! The ever so tasty sisig on top of a normal pancit!"/>
                     </span>
                 </p>
             </div>
